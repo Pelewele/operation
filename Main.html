@@ -3,17 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OPERATION</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Yes or No Question</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        label {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .radio-container {
+            margin: 10px 0;
+        }
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
     <script>
         function handleFormSubmit(event) {
-            event.preventDefault(); // Prevent form submission
-            
+            event.preventDefault();
             const yesRadio = document.getElementById('yes');
             const noRadio = document.getElementById('no');
-
             if (yesRadio.checked) {
-                window.location.href = "https://youtu.be/IkoIKcuq3ic?si=fLR5PGAPQ8B6cEYl";
+                window.location.href = "https://youtu.be/IkoIKcuq3ic?si=xcskYwPFfwSagh6W";
             } else if (noRadio.checked) {
                 alert("You chose the wrong answer :(");
             }
@@ -24,7 +62,7 @@
     <div class="container">
         <form onsubmit="handleFormSubmit(event)">
             <div id="question-container">
-                <label for="question">Will you be my Emily?</label>
+                <label for="question">WILL YOU BE MY EMILY???</label>
                 <div class="radio-container">
                     <input type="radio" id="yes" name="answer" value="yes">
                     <label for="yes">Yes</label>
