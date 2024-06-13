@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERATION</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            const yesRadio = document.getElementById('yes');
+            const noRadio = document.getElementById('no');
+
+            if (yesRadio.checked) {
+                window.location.href = "https://youtu.be/IkoIKcuq3ic?si=fLR5PGAPQ8B6cEYl";
+            } else if (noRadio.checked) {
+                alert("You chose the wrong answer :(");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="handleFormSubmit(event)">
+            <div id="question-container">
+                <label for="question">Will you be my Emily?</label>
+                <div class="radio-container">
+                    <input type="radio" id="yes" name="answer" value="yes">
+                    <label for="yes">Yes</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" id="no" name="answer" value="no">
+                    <label for="no">No</label>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
